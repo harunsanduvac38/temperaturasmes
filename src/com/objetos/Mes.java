@@ -5,9 +5,10 @@ public class Mes {
     
     
     private String nombre;
-    private int tempMax;
-    private int tempMin;
+    private double tempMax;
+    private double tempMin;
 
+    
     public void setNombre(String nombre) {
     this.nombre = nombre;
     }
@@ -16,22 +17,22 @@ public class Mes {
         return this.nombre;
     }
 
-    public void setTempMax(int tempMax) {
+    public void setTempMax(double tempMax) {
         this.tempMax = tempMax;
     }
-    public int getTempMax() {
+    public double getTempMax() {
         return this.tempMax;
     }
 
-    public void setTempMin(int tempMin) {
+    public void setTempMin(double tempMin) {
         this.tempMin = tempMin;
     }
-    public int getTempMin(){
+    public double getTempMin(){
         return this.tempMin;
     }
 
     public double calcularMedia() {
-    return (double)(this.tempMax + this.tempMin) / 2;   
+    return (double)Math.round(((this.tempMax + this.tempMin) / 2) * 100.0) / 100.0;   
     } 
 
 

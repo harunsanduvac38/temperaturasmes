@@ -14,22 +14,24 @@ public class Clima {
 
 
         ArrayList<Mes> meses = new ArrayList<Mes>();
+        String[] nombreMeses = new String[] {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"};
+
     
         Scanner teclado = new Scanner(System.in);
         
         for(int i = 1; i <= 12; i++) {
         
             Mes mes = new Mes();
-            System.out.println("\nIngresa el mes " + (i));
-            String nombre = teclado.nextLine();
+            
+            String nombre = nombreMeses[i-1];
             mes.setNombre(nombre);
 
-            System.out.println("\nMáxima Temperatura: ");
-            int tempMax = Integer.parseInt(teclado.nextLine());
+            
+            double tempMax = Math.round(((Math.random() * 70) -20) * 100.0) / 100.0;
             mes.setTempMax(tempMax);
 
-            System.out.println("\nMínima Temperatura: ");
-            int tempMin = Integer.parseInt(teclado.nextLine());
+            
+            double tempMin = Math.round(((Math.random() * (mes.getTempMax() + 21)) - 20) * 100.0) / 100.0;
             mes.setTempMin(tempMin);
 
 
@@ -40,6 +42,7 @@ public class Clima {
         for(Mes mes: meses) {
             System.out.println(mes);
         }
+
         
     }
 }
