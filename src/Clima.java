@@ -27,11 +27,11 @@ public class Clima {
             mes.setNombre(nombre);
 
             
-            double tempMax = Math.round(((Math.random() * 70) -20) * 100.0) / 100.0;
+            double tempMax = Math.round(((Math.random() * 65) -15) * 100.0) / 100.0;
             mes.setTempMax(tempMax);
 
             
-            double tempMin = Math.round(((Math.random() * (mes.getTempMax() + 21)) - 20) * 100.0) / 100.0;
+            double tempMin = Math.round(((Math.random() * (mes.getTempMax() + 16)) - 15) * 100.0) / 100.0;
             mes.setTempMin(tempMin);
 
 
